@@ -1,0 +1,27 @@
+\chapter{绪论}
+\section{使用方法}
+\subsection{编译工具配置}
+需要使用texlive 2020以上版本。如果用其他低版本的texlive，则需要将dissertation.tex第29行\verb|\xeCJKsetup{AutoFakeBold=2.5}|注释掉，否则会导致生成的pdf无法正常复制，影响茶盅。
+
+\subsection{编译}
+第一次编译需要先编译dissertation.tex文件。
+
+\subsection{内容}
+将dissertation.tex中的标题等信息替换成自己的论文信息，摘要在abstract.tex中修改，正文在chapter1.tex、chapter2.tex、chapter3.tex、chapter4.tex、chapter5.tex等文件修改。
+
+\subsection{参考文献}
+在bibfile.bib文件里面添加参考文献信息，参考文献信息可以通过百度学术、bing学术、google scholar直接导出成bib文件所需格式。
+
+\section{参考文献引用}
+\subsection{上标引用}
+使用\verb|\cite{词条名}|进行引用，如\cite{hofmann2006physical}......
+
+\subsection{作者名引用}
+使用\verb|\citet{词条名}|进行引用，如\citet{blakely1996potential}做了......
+
+\section{110分钟了解\LaTeXe}
+\href{https://mirrors.tuna.tsinghua.edu.cn/CTAN/info/lshort/chinese/lshort-zh-cn.pdf}{https://mirrors.tuna.tsinghua.edu.cn/CTAN/info/lshort/chinese/lshort-zh-cn.pdf}
+
+\section{声明}
+本模板版权归作者所有，任何人可以免费使用和转发本模板，无需通知作者。未经作者允许，任何人或组织不得将本模板用于任意形式的盈利性活动，否则追究一切责任。
+作者对使用本模板造成的直接或间接损失不负任何责任。

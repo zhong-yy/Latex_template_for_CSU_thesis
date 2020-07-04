@@ -1,0 +1,15 @@
+%\chapter*{附录}
+%\addcontentsline{toc}{chapter}{附录}
+\makeatletter
+\@addtoreset{equation}{chapter}
+\makeatother
+\renewcommand{\theequation}{\thechapter-\arabic{equation}}
+\numberwithin{table}{chapter}
+\numberwithin{figure}{chapter}
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+\renewcommand{\thetable}{\thechapter-\arabic{table}}
+\appendix
+\chapter{abcd}\label{cha:appendix1}
+\begin{equation}
+1+1=2
+\end{equation}

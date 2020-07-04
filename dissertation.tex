@@ -1,0 +1,267 @@
+%中南大学硕士学位论文模板(按学校格式要求自制，非官方发布) 
+%时间：2020年6月25日
+%作者：钟乙源 zhongyiyuan@csu.edu.cn
+%导师：任政勇
+%单位：地球科学与信息物理学院
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright © 2020 钟乙源
+% 未经作者允许，不得以本模板用于任意形式的盈利性活动。
+% 作者对使用本模板造成的直接或间接损失不负任何责任。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,12pt,twoside]{report}
+%% 文档类型使用report或者book都可以，但是不能用article，因为article中没有chapter
+%% a4paper 表示纸张幅面宽210mmX高297mm
+%% openright 表示新的一章从右页开始，openany表示每一章从左页(即双面时的背面)或者右页（即双面打印时的正面）开始都可以
+%% twoside 表示区分左右页
+
+%\usepackage[no-math]{fontspec}
+\usepackage{fontspec}
+%%%%%%%%%%%公式配置%%%%%%%%%%%%%%
+\usepackage[intlimits,sumlimits]{amsmath}
+%\usepackage{txfonts}
+%\usepackage{nccmath}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{bm}
+%\usepackage{wasysym}
+
+%\usepackage{unicode-math}
+\usepackage{amsfonts}
+\usepackage{mathptmx}
+\usepackage{esint}%The package esint.sty allows you to use new integrals symbols.
+
+%%公式编号方式
+\renewcommand{\theequation}{\thechapter-\arabic{equation}}%%公式编号形式为(章-公式号)，如(1-1)
+
+%中文字体宏包ctex
+%默认小四号字体，采用半角标点
+\usepackage{xeCJK}
+\xeCJKsetup{AutoFakeBold=2.5}
+\usepackage[zihao=-4,space,heading,scheme=chinese,punct=banjiao]{ctex}
+
+
+%\usepackage{mathptmx}
+\setCJKfamilyfont{hwxw}{华文新魏}%使用windows中的华文新魏字体
+\newcommand{\xinwei}{\CJKfamily{hwxw}}
+\setmainfont{Times New Roman}%设置英文字体为Times New Roman
+
+%%%%版式%%%%%%%
+%用A4规格输出，打印区面积为240mm×146mm（包括篇眉）,页脚距底端距离为 1.75 厘米,页眉至顶端距离为 1.5 厘米
+%A4 297mmX210mm
+%见https://www.jianshu.com/p/0719795278eb
+%\usepackage[includehead,left=32mm,right=32mm,top=27mm,bottom=30mm]{geometry}textheight=240mm
+\usepackage[includehead,left=32mm,right=32mm,textheight=240mm,headsep=5mm,bottom=27mm,footskip=9.5mm]{geometry}
+
+%设置页边距的命令要在设置页眉的命令之前
+\usepackage{layout}
+\usepackage{paralist}
+\usepackage{fancyhdr}
+\pagestyle{fancy}%设置页眉
+%\fancyhead{}
+%\fancyhead[L]{}
+%\fancyhead[R]{
+%}
+\usepackage[dvipsnames]{xcolor}
+\renewcommand{\headrule}{\color{lightgray}\hrule width\headwidth height0.9pt}
+%\renewcommand{\headrulewidth}{3pt}
+
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\makeatletter
+\floatname{algorithm}{\zihao{-4} 算法}
+
+\usepackage{algpseudocode} 
+
+\renewcommand{\algorithmicrequire}{\textbf{}}
+
+\usepackage{array}%制作表格宏包
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}m{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}m{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}m{#1}}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+%%%%%%%%%插图宏包
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{caption}
+\usepackage{float}
+\DeclareCaptionLabelSeparator{figurelabelset}{\hspace{1em}} 
+\DeclareCaptionFont{figurefont}{\heiti\zihao{5}}
+\DeclareCaptionFont{figurelabelfont}{\kaishu\zihao{5}}
+\DeclareCaptionFont{figuretextfont}{\kaishu\zihao{5}}
+\captionsetup{
+    labelsep=figurelabelset,
+    format=hang,
+    %justification=centerfirst
+	labelfont=figurelabelfont,
+	textfont=figuretextfont,
+    belowskip=-0.5ex
+}
+
+%调节图表名上下的间距
+\newcommand{\topcaption}{%
+	\setlength{\abovecaptionskip}{3.5pt}%
+	\setlength{\belowcaptionskip}{-5pt}%
+	\caption}
+\setlength{\abovecaptionskip}{5pt}%
+\setlength{\belowcaptionskip}{-7.5pt}%
+
+
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+\renewcommand{\thetable}{\thechapter-\arabic{table}}
+
+\usepackage{lastpage}
+
+
+%各级标题格式设置
+\ctexset{
+    chapter={
+        number=\arabic{chapter},
+        format=\bfseries\zihao{3}\centering,
+%        name={,},
+        nameformat=\zihao{3}\heiti,
+        titleformat={\zihao{3}\heiti},
+        afterskip=15pt,
+        beforeskip=-5pt,
+        pagestyle={fancy}
+    }
+}
+\ctexset{
+    section={
+        format=\mdseries\zihao{-4}\heiti,
+%        indent=\parindent,
+        beforeskip=0.8ex,
+        afterskip=0.5ex,
+    }
+}
+\ctexset{
+    subsection={
+        format=\mdseries\zihao{-4},
+%        indent=\parindent,
+        beforeskip=0.8ex,
+        afterskip=0.5ex,
+    }
+}
+
+
+%GBT参考文献https://gitee.com/walkeraguo/gbt7714-bibtex-style
+\usepackage[sort&compress]{gbt7714}
+\bibliographystyle{gbt7714-numerical}
+\usepackage{natbib}
+\setlength{\bibsep}{3pt}
+\usepackage[colorlinks=true,breaklinks=true]{hyperref}
+\hypersetup{
+  linkcolor=black,
+  citecolor=blue,
+  bookmarksnumbered=true,
+}
+
+\renewcommand{\thefootnote}{\roman{footnote}}
+\usepackage{titletoc}
+
+
+\titlecontents{chapter}[0pt]{\heiti}
+{\contentspush{\thecontentslabel\hspace*{0.5em}}}
+{}{\titlerule*[5pt]{.}\contentspage}
+
+\titlecontents{section}[2em]{}
+{\contentspush{\thecontentslabel\hspace*{0.5em}}}
+{}{\titlerule*[5pt]{.}\contentspage}
+
+\titlecontents{subsection}[4em]{}
+{\contentspush{\thecontentslabel\hspace*{0.5em}}}
+{}{\titlerule*[5pt]{.}\contentspage}
+\makeatletter
+\renewcommand\@dotsep{0.5}%指引线中相邻点的距离
+\renewcommand{\@pnumwidth}{0.5em}
+\makeatother
+
+\usepackage{wallpaper}
+\usepackage[titletoc,title]{appendix}
+\usepackage{lipsum}
+
+%题目
+\newcommand{\mytitle}{自制中南大学硕士论文\LaTeX 模板}
+%英文题目
+\newcommand{\myEnlishTitle}{A \LaTeX  ~template for master thesis submitted to Central South University}
+%作者姓名
+\newcommand{\myName}{钟乙源}
+%学科专业
+\newcommand{\major}{地质资源与地质工程}
+%学科方向
+\newcommand{\discipline}{地球探测与信息技术}
+%研究方向，学校提供的的格式中有“学科方向”和“研究方向”这两个，不知道什么区别
+\newcommand{\researchTopic}{地球探测与信息技术}
+%学院
+\newcommand{\school}{地球科学与信息物理学院}
+%导师
+\newcommand{\mySupervisor}{任政勇 教授}
+%副导师
+\newcommand{\myAssociateSupervisor}{汤井田 教授}
+%中图分类号，网上搜
+\newcommand{\zhongtu}{P631.1}
+%UDC，网上搜
+\newcommand{\UDC}{550}
+\newcommand{\defendYear}{2020}
+\newcommand{\defendMonth}{6}
+\begin{document}
+    \songti
+    
+    \linespread{1.56}\selectfont%正文前采用宽一点的行距，后面正文开始前再改成学校规定的20pt行距，不然太难看
+    
+    %%cover.tex文件中包含：封面、扉页
+    \include{cover}
+    %%copyright.tex文件中包含“学位论文原创性声明”和“版权使用授权书”
+    \include{copyright}
+    
+    \fancyhead{}
+    \pagenumbering{Roman}
+    \fancyhead[L]{} 
+    %%abstract.tex文件中包含中英文摘要
+
+    \include{abstract}
+    \include{contents}
+    \hypersetup{linkcolor=red}
+    
+
+
+	%%正文页眉设置
+	\fancyhead[EL,OR]{\songti\zihao{5} \leftmark}%
+	\fancyhead[ER,OL]{\songti\zihao{5} 中南大学硕士学位论文}
+	\renewcommand{\headrule}{\color{black}\hrule width\headwidth height0.9pt}
+	
+	%%正文内容
+	%正文行距20pt
+	\zihao{-4}
+	\setlength{\baselineskip}{20pt}
+	
+	\pagenumbering{arabic}
+%	\fancyfoot[C]{\zihao{-5} 第\thepage 页\quad 共\pageref*{LastPage} 页}
+    \include{chapter1}
+    \include{chapter2}
+    \include{chapter3}
+    \include{chapter4}
+    \include{chapter5}
+    %\include{chapter6}
+    \include{appendix}
+    \include{reference}
+    
+    \ctexset{
+    	chapter={
+    		name={,},
+    		aftername=\hspace*{0pt},
+    		number={},
+    		format=\centering
+    	}
+    }
+%	\fancyhead[EL,OR]{\songti\zihao{5} \leftmark}%
+    \include{research_output}
+    \include{acknowledgement}
+
+    %\bibliographystyle{plain}%
+    %\bibliography{bibfile}
+
+\end{document}

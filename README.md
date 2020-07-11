@@ -7,7 +7,7 @@
 ## 正文内容
 将 dissertation.tex中的论文作者标题（第186-209行）替换成自己的论文信息，摘要需在abstract.tex中直接修改，正文在 chapter1.tex、chapter2.tex、chapter3.tex、chapter4.tex、chapter5.tex 等文件修改。
 ## 参考文献
-本模板采用bibtex生成参考文献，模板使用了[Zeping Lee](https://github.com/CTeX-org/gbt7714-bibtex-style)制作的bibtex样式，所引用的文献格式会自动按照gbt7714格式编排，不需要手工调整。只需要在bibfile.bib文件中添加文献词条，便可引用。例如bibfile.bib中包含以下词条：
+本模板采用bibtex生成参考文献，模板使用了[Zeping Lee](https://github.com/CTeX-org/gbt7714-bibtex-style)制作的bibtex样式，所引用的文献格式会自动按照gbt7714格式编排，不需要手工调整。只需要在bibfile.bib文件中添加文献词条，便可引用。例如在bibfile.bib中包含以下词条：
 ```
 @book{blakely1996potential,
 	title={Potential theory in gravity and magnetic applications},

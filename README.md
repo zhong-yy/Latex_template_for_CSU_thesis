@@ -1,5 +1,5 @@
 # 中南大学硕士学位论文模板 A LATEX template for master thesis submitted to Central South University
-
+模板没有封装成cls文件，因此可读性较高，并且易于修改和定制。
 ## 编译
 需要使用 [texlive 2020](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/) 以上版本编译。*如果用其他低版本的 texlive，则需要将dissertation.tex文件中第29行的`\xeCJKsetup{AutoFakeBold=2.5}`注释掉，否则生成的pdf无法正常复制，影响查重*。 
 

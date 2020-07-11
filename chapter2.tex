@@ -1,13 +1,24 @@
 \chapter{公式}
 
-例如，
+行内公式的书写格式为\${\kaishu 公式}\$，例如$\mathbf{F}=m\mathbf{a}$。
+
+行间公式需要放在equation环境中，格式为
 \begin{verbatim}
 \begin{equation}
-\oint_{\Gamma}\mathbf{H}\cdot d\mathbf{l}
-=\iint_\Omega(\mathbf{J}+\frac{d\mathbf{D}}{dt})\cdot d\mathbf{S}
+公式
 \end{equation}
 \end{verbatim}
-产生
+
+例如，
 \begin{equation}
 \oint_{\Gamma}\mathbf{H}\cdot d\mathbf{l}=\iint_\Omega(\mathbf{J}+\frac{d\mathbf{D}}{dt})\cdot d\mathbf{S}
+\end{equation}
+
+多行公式例子如下
+\begin{equation}
+\begin{split}
+a=&b+c+d+e+f+g+h+i\\
+=&\frac{x^2+y^{1/2}}{x^2+y^2}\\
+=&\sum_{i=0}^{N}x_i^2
+\end{split}
 \end{equation}

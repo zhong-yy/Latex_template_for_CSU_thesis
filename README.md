@@ -36,4 +36,4 @@ Cambridge university press, 1996.
 ## LaTeX资源链接
 - [LaTeX安装教程](https://github.com/OsbertWang/install-latex/releases/download/v2020.7.1/Install-LaTeX.pdf)
 - [110 分钟了解LaTeX](https://mirrors.tuna.tsinghua.edu.cn/CTAN/info/lshort/chinese/lshort-zh-cn.pdf)
-- [中南大学开题报告Latex模板](https://github.com/zhong-yy/CSU_Thesis_Proposal)
+- [中南大学开题报告LaTex模板](https://github.com/zhong-yy/CSU_Thesis_Proposal)

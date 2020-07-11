@@ -1,5 +1,5 @@
 # 中南大学硕士论文LaTeX模板
-模板没有封装成cls文件，因此可读性较高，并且易于修改和定制。
+模板没有封装成cls文件，因此可读性较高，并且易于修改和定制。如果github下载速度过慢，可以通过这个链接下载(https://gitee.com/hizhong/Latex_template_for_CSU_thesis)。
 ## 编译
 需要使用 [texlive 2020](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/) 以上版本编译。*如果用其他低版本的 texlive，则需要将dissertation.tex文件中第29行的`\xeCJKsetup{AutoFakeBold=2.5}`注释掉，否则生成的pdf无法正常复制，影响查重*。 
 

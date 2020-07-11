@@ -1,9 +1,25 @@
-\chapter{插图}
+\chapter{图片和表格}
 如图\ref{fig:csu}所示
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{figures/csu}
 	\caption{中南大学}
 	\label{fig:csu}%标签，以备交叉引用
 \end{figure}
+
+如表\ref{tab:example_table}所示
+\begin{table}[H]
+	\centering
+	\caption{成绩表}\label{tab:example_table}
+	\begin{tabular}{lll}
+		\toprule
+		姓名& 数学  &  语文\\
+		\midrule
+		A& 100 & 100  \\
+		
+		B& 100 & 100 \\
+		
+		C& 100 & 100 \\	
+		\bottomrule
+	\end{tabular}
+\end{table}

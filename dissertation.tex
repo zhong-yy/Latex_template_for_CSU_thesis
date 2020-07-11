@@ -117,7 +117,7 @@
 
 
 %各级标题格式设置
-\ctexset{
+\ctexset{%章标题格式
     chapter={
         number=\arabic{chapter},
         format=\bfseries\zihao{3}\centering,
@@ -129,7 +129,7 @@
         pagestyle={fancy}
     }
 }
-\ctexset{
+\ctexset{%节标题格式
     section={
         format=\mdseries\zihao{-4}\heiti,
 %        indent=\parindent,
@@ -137,7 +137,7 @@
         afterskip=0.5ex,
     }
 }
-\ctexset{
+\ctexset{%小节标题格式
     subsection={
         format=\mdseries\zihao{-4},
 %        indent=\parindent,
@@ -163,15 +163,15 @@
 \usepackage{titletoc}
 
 
-\titlecontents{chapter}[0pt]{\heiti}
+\titlecontents{chapter}[0pt]{\heiti} %目录中章标题缩进0字符，黑体
 {\contentspush{\thecontentslabel\hspace*{0.5em}}}
 {}{\titlerule*[5pt]{.}\contentspage}
 
-\titlecontents{section}[2em]{}
+\titlecontents{section}[2em]{} %目录中节标题（二级标题）缩进2字符
 {\contentspush{\thecontentslabel\hspace*{0.5em}}}
 {}{\titlerule*[5pt]{.}\contentspage}
 
-\titlecontents{subsection}[4em]{}
+\titlecontents{subsection}[4em]{} %目录中小节标题（三级标题）缩进4字节
 {\contentspush{\thecontentslabel\hspace*{0.5em}}}
 {}{\titlerule*[5pt]{.}\contentspage}
 \makeatletter

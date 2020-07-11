@@ -1,8 +1,9 @@
 # 中南大学硕士学位论文模板 A LATEX template for master thesis submitted to Central South University
 
-## 如何使用
 ## 编译
-需要使用 [texlive 2020](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/) 以上版本编译。*如果用其他低版本的 texlive，则需要将dissertation.tex文件中第29行的`\xeCJKsetup{AutoFakeBold=2.5}`注释掉，否则生成的pdf无法正常复制，影响查重*。 第一次编译需要先编译 dissertation.tex 文件。
+需要使用 [texlive 2020](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/) 以上版本编译。*如果用其他低版本的 texlive，则需要将dissertation.tex文件中第29行的`\xeCJKsetup{AutoFakeBold=2.5}`注释掉，否则生成的pdf无法正常复制，影响查重*。 
+
+第一次编译需要先编译 dissertation.tex 文件。
 ## 正文内容
 将 dissertation.tex中的论文作者标题（第186-209行）替换成自己的论文信息，摘要需在abstract.tex中直接修改，正文在 chapter1.tex、chapter2.tex、chapter3.tex、chapter4.tex、chapter5.tex 等文件修改。
 ## 参考文献

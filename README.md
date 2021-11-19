@@ -1,6 +1,7 @@
 # 中南大学硕士论文LaTeX模板
 
 钟乙源
+
 Yiyuan Zhong
 
 模板没有封装成cls文件，因此可读性较高，并且易于修改和定制。如果github下载速度过慢，[可以通过这个链接下载](https://gitee.com/hizhong/Latex_template_for_CSU_thesis)。

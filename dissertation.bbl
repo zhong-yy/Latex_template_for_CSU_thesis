@@ -1,0 +1,21 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}\else
+  \providecommand\doi[1]{\href{https://doi.org/#1}{\nolinkurl{#1}}}\fi
+
+\bibitem[Hofmann-Wellenhof et~al.(2006)Hofmann-Wellenhof and
+  Moritz]{hofmann2006physical}
+Hofmann-Wellenhof~B, Moritz~H.
+\newblock Physical geodesy\allowbreak[M].
+\newblock Springer Science \& Business Media, 2006.
+
+\bibitem[Blakely(1996)]{blakely1996potential}
+Blakely~R~J.
+\newblock Potential theory in gravity and magnetic applications\allowbreak[M].
+\newblock Cambridge: Cambridge university press, 1996.
+
+\end{thebibliography}

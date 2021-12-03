@@ -1,1 +1,18 @@
-\chapter{xxx}
+\chapter{插入参考文献}
+在xxx.bib文件中输入参考文件词条，例如
+\begin{verbatim}
+	@book{blakely1996potential,
+		title={Potential theory in gravity and magnetic applications},
+		author={Blakely, Richard J},
+		year={1996},
+		address={Cambridge},
+		publisher={Cambridge university press}
+	}
+\end{verbatim}
+
+如果在正文中引用该参考文献的话，使用\verb|\cite{blakely1996potential}|，便可以得到\cite{blakely1996potential}。
+\section{上标引用}
+使用\verb|\cite{词条名}|进行引用，如\cite{hofmann2006physical}......
+
+\section{作者名引用}
+使用\verb|\citet{词条名}|进行引用，如\citet{blakely1996potential}做了......

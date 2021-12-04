@@ -1,0 +1,9 @@
+#untrack files
+*.aux
+*.bbl
+*.synctex.gz
+*.synctex(busy)
+*.blg
+*.log
+*.out
+*.toc
